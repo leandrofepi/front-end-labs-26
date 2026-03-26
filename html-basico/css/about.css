@@ -12,10 +12,6 @@
     --color-base-footer: #777;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     color: var(--color-primary);
     font-family: var(--font-default);   
