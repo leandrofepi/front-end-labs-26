@@ -2,7 +2,29 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    color: blueviolet;
+.segundo-titulo-secundario{
+    color: rgb(46, 25, 5);
     font-style: italic;
+    font-size: 30px;
+}
+
+.titulo-secundario {
+    text-align: right;
+}
+
+.primeiro-titulo-secundario {
+    color: rgb(26, 5, 46);
+    font-style: italic;
+    font-size: 30px;
+}
+
+.font-titulos {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.titulo-principal {
+    color: rgb(26, 5, 46);
+    font-style: italic;
+    font-size: 40px;
 }
