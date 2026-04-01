@@ -1,77 +1,160 @@
 :root {
-    /*Paleta tipográfica*/
+    /* TYPOGRAPHY */
     --font-default: "Datatype", monospace;
-    --font-principal-title: "Archivo Black", sans-serif; 
-    --font-secondary-title:  "Roboto", sans-serif;   
-    --font-secondary-title-wgt: 900;  
-    
-    /*Paleta de Cores*/
+    --font-principal-title: "Archivo Black", sans-serif;
+    --font-secondary-title: "Roboto", sans-serif;
+    --font-secondary-title-wgt: 900;
+    --font-size-sm: 0.9rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.2rem;
+
+    /* COLORS */
     --color-primary: #333;
     --color-bkg-figures: #F2EDED;
-    --color-border: #CCC;
+    --color-border-default: #CCC;
     --color-base-footer: #777;
+    --color-text-muted: #777;
+    --color-link: #333;
+    --color-link-hover: #000;
+
+    /* SPACING */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+
+    /* BORDER */
+    --border-width: 1px;
+    --border-radius: 4px;
+    --border-radius-md: 8px;
+
+    /* SIZE */
+    --logo-width: 94px;
+    --content-max-width: 940px;
+    --figure-center-width: 550px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-default);
     color: var(--color-primary);
-    font-family: var(--font-default);   
-    width: 940px;
+}
+
+/* PAGE WRAPPER */
+.page-wrapper {
+    width: var(--content-max-width);
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
-h1 {
+/* SITE HEADER */
+.site-header {
+    width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-header__title {
     background-image: url(../img/sobre-background.jpg);
-    padding: 10px;    
-    font-family: var(--font-principal-title);    
+    padding: 10px;
+    font-family: var(--font-principal-title);
 }
 
-h2 {
-    border-bottom: 2px groove #333;
-    margin-top: 30px;
-    font-family: var(--font-secondary-title);
-    font-weight: var(--font-secondary-title-wgt);
+/* PAGE NAV */
+.page-nav__link {
+    color: var(--color-link);
 }
 
-figure {
+.page-nav__link:hover {
+    color: var(--color-link-hover);
+}
+
+/* INTRO */
+.intro__text {
+    padding: 0 45px;
+    text-indent: 15px;
+    text-align: justify;
+}
+
+/* FIGURE CARD */
+.figure-card {
     background-color: var(--color-bkg-figures);
-    border: 1px solid var(--color-border);
+    border: var(--border-width) solid var(--color-border-default);
     text-align: center;
     padding: 15px;
     margin: 30px;
 }
 
-figcaption {
+.figure-card__caption {
     font-style: italic;
-    margin-top: 10px;
+    margin-top: var(--space-1);
     font-family: var(--font-secondary-title);
 }
 
-p {
-    padding: 0 45px;    
+.figure-card--center {
+    margin: 30px auto;
+    width: var(--figure-center-width);
+}
+
+.figure-card--float-right {
+    margin: 0 0 10px 10px;
+    float: right;
+}
+
+/* SECTION BLOCK */
+.section-block__title {
+    border-bottom: 2px groove var(--color-primary);
+    margin-top: 30px;
+    font-family: var(--font-secondary-title);
+    font-weight: var(--font-secondary-title-wgt);
+}
+
+.section-block__text {
+    padding: 0 45px;
     text-indent: 15px;
     text-align: justify;
 }
 
-#centro-distribuicao {
-    margin-right: auto;
-    margin-left: auto;
-    width: 550px;    
+/* DIFF LIST */
+.diff-list {
+    padding: 0 45px;
 }
 
-#rodape {
+.diff-list__link {
+    color: var(--color-link);
+}
+
+.diff-list__link:hover {
+    color: var(--color-link-hover);
+}
+
+/* FOOTER */
+.footer {
     margin: 30px 0;
     padding: 30px 0;
     color: var(--color-base-footer);
 }
 
-#rodape img {
-    margin-right: 30px;
-    vertical-align: middle;
-    width: 94px;
+.footer__container {
+    width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#familia-pelho {
-    margin: 0 0 10px 10px;
-    float: right;
+.footer__logo {
+    margin-right: 30px;
+    vertical-align: middle;
+    width: var(--logo-width);
+}
+
+.footer__text {
+    display: inline;
+    margin: 0;
 }
