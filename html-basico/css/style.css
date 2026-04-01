@@ -1,30 +1,37 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* Mirror Fashion – Estilos específicos da Home */
+
+/* Layout da seção de prévia "Sobre nós" */
+.c-about-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
 }
 
-.segundo-titulo-secundario{
-    color: rgb(46, 25, 5);
-    font-style: italic;
-    font-size: 30px;
+.c-about-preview__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
 }
 
-.titulo-secundario {
-    text-align: right;
+.c-about-preview__text .c-section__title {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.primeiro-titulo-secundario {
-    color: rgb(26, 5, 46);
-    font-style: italic;
-    font-size: 30px;
+.c-prose__paragraph {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-muted);
 }
 
-.font-titulos {
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-weight: bolder;
+.c-about-preview .c-figure {
+  margin-block: 0;
 }
 
-.titulo-principal {
-    color: rgb(26, 5, 46);
-    font-style: italic;
-    font-size: 40px;
+@media (max-width: 768px) {
+  .c-about-preview {
+    grid-template-columns: 1fr;
+  }
 }
