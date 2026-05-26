@@ -88,3 +88,78 @@ i {
 h1, h2 {
     font-size: var(--font-size-large);
 }
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    body{
+        padding: 15px;
+    }
+    
+    .grid-header-container {
+        grid-template-areas: 'top-left top-rigth';
+        align-items: center;
+    }
+
+    .top-right img {
+        max-width: 120px;
+    }
+
+    .grid-button-container{
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+    }
+
+    .grid-button-container input {
+        padding: 10px;
+    }
+
+    @media screen and (max-width:480px) {
+        body{
+            padding: 10px;
+        }
+
+        .grid-header-container {
+            grid-template-areas: 
+                'top-left'
+                'top-rigth';
+        
+            text-align: center;
+            gap: 10px;           
+        }
+
+        .top-right {
+            display: none;
+        }
+
+        .top-left{
+            justify-self: center;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        fieldset input, select {
+            padding: 8px;
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        .grid-button-container{
+            grid-template-columns: 1fr;
+            gap: 10px;
+            border-bottom: none;
+        }
+
+        .grid-button-container input {
+            width: 100%;
+            margin-bottom: 0;
+            padding: 12px;
+        }
+
+    }
+
+}
